@@ -1,0 +1,58 @@
+{
+  "name": "@gordalina/magic-home",
+  "version": "0.0.1",
+  "description": "Magic Home lights controller library with simple API",
+  "repository": "github:gordalina/magic-home",
+  "main": "dist/index.js",
+  "author": "Samuel Gordalina <samuel.gordalina@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "debug": "^3.1.0"
+  },
+  "scripts": {
+    "build": "babel lib --out-dir dist",
+    "lint": "eslint lib/* tests/*",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "expect": "^23.4.0",
+    "husky": "^0.14.3",
+    "jest": "^23.4.2",
+    "lint-staged": "^7.2.0",
+    "regenerator-runtime": "^0.12.0"
+  },
+  "##############": "Modules configuration",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "node": true,
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
