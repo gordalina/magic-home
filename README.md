@@ -29,13 +29,13 @@ const patterns = light.patterns();
 const state = await light.state();
 
 // this will close the network connection to the light
-await light.release();
+light.release();
 ```
 
 ## Debug
 
 You can enable debug environment variable to see what's happening under the hood
-by setting the `DEBUG` environment variable: 
+by setting the `DEBUG` environment variable:
 
 ```
 DEBUG=magic-home:*
