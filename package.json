@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "babel lib --out-dir dist",
-    "lint": "eslint lib/* tests/*",
+    "lint": "eslint lib tests",
     "test": "jest",
     "precommit": "lint-staged",
     "prepublish": "npm run build"
