@@ -23,6 +23,7 @@
   "author": "Samuel Gordalina <samuel.gordalina@gmail.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "debug": "^3.1.0",
     "transform-runtime": "0.0.0"
   },
