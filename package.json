@@ -7,12 +7,16 @@
   "author": "Samuel Gordalina <samuel.gordalina@gmail.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "^3.1.0",
+    "transform-runtime": "0.0.0"
   },
   "scripts": {
     "build": "babel lib --out-dir dist",
     "lint": "eslint lib tests",
     "test": "jest",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm version patch && npm publish && git push --follow-tags",
+    "release:major": "npm version patch && npm publish && git push --follow-tags",
     "precommit": "lint-staged",
     "prepublish": "npm run build"
   },
@@ -23,6 +27,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -36,7 +41,17 @@
   "##############": "Modules configuration",
   "babel": {
     "presets": [
-      "env"
+      [
+        "env",
+        {
+          "targets": {
+            "node": "0.10"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-runtime"
     ]
   },
   "eslintConfig": {
