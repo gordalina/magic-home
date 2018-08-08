@@ -15,8 +15,8 @@
     "lint": "eslint lib tests",
     "test": "jest",
     "release:patch": "npm version patch && npm publish && git push --follow-tags",
-    "release:minor": "npm version patch && npm publish && git push --follow-tags",
-    "release:major": "npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:major": "npm version major && npm publish && git push --follow-tags",
     "precommit": "lint-staged",
     "prepublish": "npm run build"
   },
