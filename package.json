@@ -5,7 +5,7 @@
   "repository": "github:gordalina/magic-home",
   "main": "dist/index.js",
   "author": "Samuel Gordalina <samuel.gordalina@gmail.com>",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "debug": "^3.1.0"
   },
