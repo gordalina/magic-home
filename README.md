@@ -27,9 +27,6 @@ await light.brightness(0xFF, 0, 0, 50); // red with 50% brightness
 await light.pattern('red_green_cross_fade', 1);
 const patterns = light.patterns();
 const state = await light.state();
-
-// this will close the network connection to the light
-light.release();
 ```
 
 ## Debug
